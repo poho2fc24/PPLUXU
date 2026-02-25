@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPLUX | Premium Auto-systems</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        @font-face {
+            font-family: 'BetaniaPatmos';
+            src: url('betania.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark: #0f0f0f;
+            --light: #f8f9fa;
+            --gray: #1a1a1a;
+            --logo-font: 'BetaniaPatmos', serif;
+            --heading-font: 'Montserrat', sans-serif;
+            --body-font: 'Inter', sans-serif;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { margin: 0; font-family: var(--body-font); background-color: var(--dark); color: var(--light); line-height: 1.8; -webkit-font-smoothing: antialiased; }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: rgba(15, 15, 15, 0.98);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+            height: 90px;
+        }
+
+        .logo { font-family: var(--logo-font); font-size: 2.2rem; color: var(--gold); text-decoration: none; }
+        
+        .nav-links { list-style: none; display: flex; align-items: center; margin: 0; padding: 0; }
+        .nav-links li { position: relative; margin-left: 10px; }
+        .nav-links a { color: var(--light); text-decoration: none; padding: 10px 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 0; background-color: var(--gray); min-width: 220px; border: 1px solid #333; padding: 10px 0; }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a { display: block; padding: 12px 20px; text-transform: none; }
+
+        .nav-btn { border: 1px solid var(--gold); padding: 10px 25px !important; margin-left: 20px; color: var(--gold) !important; }
+        .nav-btn:hover { background: var(--gold); color: var(--dark) !important; }
+
+        /* --- Hero --- */
+        .hero { height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1600&q=80'); background-size: cover; padding: 0 20px; }
+        .hero h1 { font-family: var(--heading-font); font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 800; background: linear-gradient(to right, #fff, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn { background: var(--gold); color: var(--dark); padding: 18px 45px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; transition: 0.4s; display: inline-block; }
+
+        /* --- Services --- */
+        .services { padding: 100px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: var(--gray); padding: 50px 30px; text-align: center; border: 1px solid #222; transition: 0.4s; text-decoration: none; color: inherit; display: block; }
+        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .card i { font-size: 2.5rem; color: var(--gold); margin-bottom: 25px; }
+
+        /* --- Sections --- */
+        .about-section { padding: 120px 10%; background-color: #0a0a0a; text-align: center; }
+        .subtitle { color: var(--gold); text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; font-weight: 700; display: block; margin-bottom: 15px; }
+        .quote { font-style: italic; font-size: 1.5rem; color: var(--gold); margin: 30px 0; }
+        
+        .contact-section { padding: 100px 10%; text-align: center; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 50px; }
+        .contact-info i { color: var(--gold); font-size: 1.5rem; margin-bottom: 10px; }
+
+        footer { text-align: center; padding: 60px; font-size: 0.75rem; color: #555; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">PPLUX</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="auto-doors.html">Auto Doors & Gates</a>
+                    <a href="smart-home.html">Smart Home Systems</a>
+                    <a href="solar.html">Solar Solutions</a>
+                    <a href="car-lift.html">Car Lift</a>
+                </div>
+            </li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#contact" class="nav-btn">Inquiry</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Automating Your Future</h1>
+        <p>Premium Electric Gates, Intelligent Smart Homes, and Solar Solutions.</p>
+        <a href="#about" class="btn">Discover Our Story</a>
+    </section>
+
+    <section id="services" class="services">
+        <a href="auto-doors.html" class="card"><i class="fas fa-door-open"></i><h3>Auto Doors</h3><p>Residential elegance to industrial security.</p></a>
+        <a href="smart-home.html" class="card"><i class="fas fa-home"></i><h3>Smart Home</h3><p>Innovative automation for a seamless lifestyle.</p></a>
+        <a href="solar.html" class="card"><i class="fas fa-solar-panel"></i><h3>Solar Energy</h3><p>Sustainable energy to power your future.</p></a>
+        <a href="car-lift.html" class="card"><i class="fas fa-car"></i><h3>Car Lift</h3><p>Industrial-grade vertical parking.</p></a>
+    </section>
+
+    <section id="about" class="about-section">
+        <span class="subtitle">Heritage & Innovation</span>
+        <h2>A Legacy in the Making</h2>
+        <p class="quote">"Precision in every system, passion in every partnership."</p>
+        <p style="color:#aaa; max-width:800px; margin:0 auto;">Founded by Phoo and Praew, PPLUX represents a commitment to building a life and a legacy together.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Start Your Project</h2>
+        <div class="contact-grid">
+            <div class="contact-info"><i class="fas fa-envelope"></i><p>inthatwork@gmail.com</p></div>
+            <div class="contact-info"><i class="fas fa-phone"></i><p>+66 63 240 1224</p></div>
+        </div>
+        <br>
+        <a href="mailto:inthatwork@gmail.com" class="btn">Send a Message</a>
+    </section>
+
+    <footer>&copy; EST.2026. PPLUX BY PHOO & PRAEW.</footer>
+
+</body>
+</html>
