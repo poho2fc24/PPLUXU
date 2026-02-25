@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Systems | PPLUX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        @font-face { font-family: 'BetaniaPatmos'; src: url('betania.ttf') format('truetype'); }
+        :root { --gold: #D4AF37; --dark: #0f0f0f; --light: #f8f9fa; --gray: #1a1a1a; --logo-font: 'BetaniaPatmos', serif; --heading-font: 'Montserrat', sans-serif; --body-font: 'Inter', sans-serif; }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { margin: 0; font-family: var(--body-font); background-color: var(--dark); color: var(--light); line-height: 1.8; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; background: rgba(15, 15, 15, 0.98); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222; height: 90px; }
+        .logo { font-family: var(--logo-font); font-size: 2.2rem; color: var(--gold); text-decoration: none; }
+        .nav-links { list-style: none; display: flex; margin: 0; padding: 0; }
+        .nav-links li { margin-left: 10px; }
+        .nav-links a { color: var(--light); text-decoration: none; padding: 10px 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-btn { border: 1px solid var(--gold); padding: 10px 25px !important; margin-left: 20px; color: var(--gold) !important; }
+        .hero { height: 65vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; padding: 0 20px; }
+        .hero h1 { font-family: var(--heading-font); font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; background: linear-gradient(to right, #fff, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { color: var(--gold); text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; font-weight: 700; display: block; margin-bottom: 20px; }
+        .content-section { padding: 100px 15%; text-align: center; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 60px; }
+        .feature-card { background: var(--gray); padding: 40px; border: 1px solid #222; transition: 0.3s; }
+        .feature-card:hover { border-color: var(--gold); }
+        .feature-card i { font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
+        .btn { display: inline-block; background: var(--gold); color: var(--dark); padding: 18px 45px; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; margin-top: 40px; }
+        footer { text-align: center; padding: 60px; color: #555; border-top: 1px solid #222; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">PPLUX</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#contact" class="nav-btn">Inquiry</a></li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <span class="subtitle">Intelligent Living</span>
+        <h1>Smart Home Systems</h1>
+        <p style="color:#ccc; max-width: 600px;">Control your environment seamlessly through innovative, invisible technology.</p>
+    </header>
+    <section class="content-section">
+        <h2>Your Home, Elevated</h2>
+        <p style="color: #aaa; font-size: 1.1rem;">Experience absolute convenience. From automated lighting that sets the mood, to climate control and advanced security protocols—all manageable from a single interface.</p>
+        <div class="feature-grid">
+            <div class="feature-card"><i class="fas fa-lightbulb"></i><h3>Smart Lighting</h3><p style="color:#888; font-size: 0.9rem;">Automated ambiance tailored to the time of day and your routines.</p></div>
+            <div class="feature-card"><i class="fas fa-temperature-low"></i><h3>Climate Control</h3><p style="color:#888; font-size: 0.9rem;">Intelligent AC management to optimize comfort and save energy.</p></div>
+            <div class="feature-card"><i class="fas fa-video"></i><h3>Full Security</h3><p style="color:#888; font-size: 0.9rem;">CCTV and alarm integration with real-time mobile alerts.</p></div>
+        </div>
+        <a href="mailto:inthatwork@gmail.com" class="btn">Consult With Us</a>
+    </section>
+    <footer>&copy; EST.2026. PPLUX BY PHOO & PRAEW.</footer>
+</body>
+</html>
